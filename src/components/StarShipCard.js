@@ -8,7 +8,10 @@ const Starshipcard = (ship) => {
         // </div>
         <div className="card starShip" style={{width: '18rem'}} >
         <div className="card-body">
-          <h5 className="card-title">{ship.ship.name}</h5>
+            { ship.ship.name
+              ?<h5 className="card-title">{ship.ship.name}</h5>
+              :<h5 className="card-title">{ship.ship.title}</h5>
+            }         
           
          </div>
       </div>
@@ -16,5 +19,4 @@ const Starshipcard = (ship) => {
 }
 
 export default Starshipcard;
- 
 
